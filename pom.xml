@@ -66,6 +66,10 @@ Code: https://github.com/springinpractice
 			<type>war</type>
 		</dependency>
 		
+		
+		
+		
+		
 		<!-- Spring Security dependencies -->
 		<dependency>
 			<groupId>org.springframework.security</groupId>

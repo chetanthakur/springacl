@@ -34,7 +34,11 @@ Code: https://github.com/springinpractice
 	
 	
 	<!-- Data source -->
-	<jee:jndi-lookup id="dataSource" jndi-name="jdbc/Sip07DS" resource-ref="true"/>
+	<!-- <jee:jndi-lookup id="dataSource" jndi-name="jdbc/Sip07DS" resource-ref="true"/> -->
+	
+	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName" value="java:comp/env/jdbc/MyLocalDB"/>
+    </bean>
 	
 	<!-- ORM -->
 	<util:properties id="hibernateProperties">
